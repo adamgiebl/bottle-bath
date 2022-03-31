@@ -1,0 +1,26 @@
+
+% if not is_xhr:
+  % include("header")
+% end
+
+<main class="modal"
+  data-spa = "yes"
+  data-spa_url = "/items/{{item_id}}" 
+  data-spa_title = "{{title}}"
+  data-spa_hide = "[data-spa_mode='modal']" 
+  data-spa_display = "block"
+  data-spa_mode = "modal"
+>
+
+{{title}} 
+
+<h1>
+  Item {{item_id}}
+</h1>
+
+</main>
+
+
+% if not is_xhr:
+  % include("footer")
+% end

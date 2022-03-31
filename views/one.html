@@ -1,0 +1,23 @@
+
+% if not is_xhr:
+  % include("header")
+% end
+
+<main
+data-spa = "yes"
+data-spa_url = "/one" 
+data-spa_title = {{title}} 
+data-spa_hide = "[data-spa]" 
+data-spa_display = "block"
+>
+
+  <h1>
+    One
+  </h1>
+  
+</main>
+
+
+% if not is_xhr:
+  % include("footer")
+% end

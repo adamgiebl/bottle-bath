@@ -1,0 +1,27 @@
+% if not is_xhr:
+  % include("header")
+% end
+
+<!-- 
+  data-spa_show       if left blank, shows the whole main where it is declared
+  data-spa_display    block | grid | flex
+  data-spa_mode       full | modal
+ -->
+<main
+  data-spa = "yes"
+  data-spa_url = "/" 
+  data-spa_title = {{title}} 
+  data-spa_hide = "[data-spa]"
+  data-spa_display = "block"
+>
+
+  <h1>
+    Home
+  </h1>
+
+</main>
+
+
+% if not is_xhr:
+  % include("footer")
+% end
