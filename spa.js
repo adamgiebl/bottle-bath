@@ -6,7 +6,7 @@ const STALE_TIME = 5000;
   const mainElement = document.querySelector("main");
   spaURL = mainElement.dataset.spaURL;
   history.replaceState({ spaURL: spaURL }, "", spaURL);
-  console.log("Inital state replace", history.state);
+  console.log("Inital state replace", spaURL);
 })();
 
 async function spa(spaURL, replace_state = true) {
