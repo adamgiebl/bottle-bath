@@ -1,14 +1,11 @@
 
-% if not is_xhr:
+% if not is_fetch:
   % include("header")
 % end
 
 <main
-data-spa = "yes"
-data-spa_url = "/one" 
-data-spa_title = {{title}} 
-data-spa_hide = "[data-spa]" 
-data-spa_display = "block"
+  data-spa_url="/one" 
+  data-spa_title={{title}}
 >
 
   <h1>
@@ -18,6 +15,6 @@ data-spa_display = "block"
 </main>
 
 
-% if not is_xhr:
+% if not is_fetch:
   % include("footer")
 % end

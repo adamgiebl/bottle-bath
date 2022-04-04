@@ -1,26 +1,28 @@
 
-% if not is_xhr:
+% if not is_fetch:
   % include("header")
 % end
 
-<main class="modal"
-  data-spa = "yes"
-  data-spa_url = "/items/{{item_id}}" 
-  data-spa_title = "{{title}}"
-  data-spa_hide = "[data-spa_mode='modal']" 
-  data-spa_display = "block"
-  data-spa_mode = "modal"
->
+<div class="spa-modal-overlay">
+  <a href="/two" onclick="spa(this.getAttribute('href')); return false" class="spa-modal-close-layer"></a>
+  <main 
+    class="modal"
+    data-spa_modal
+    data-spa_url="/items/{{item_id}}" 
+    data-spa_title={{title}}
+  >
 
-{{title}} 
+  {{title}} 
 
-<h1>
-  Item {{item_id}}
-</h1>
+  <h1>
+    Item {{item_id}}
+  </h1>
+  <a href="/two" onclick="spa(this.getAttribute('href')); return false">✖</a>
+  </main>
+</div>
 
-</main>
 
 
-% if not is_xhr:
+% if not is_fetch:
   % include("footer")
 % end

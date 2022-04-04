@@ -1,28 +1,20 @@
-% if not is_xhr:
+% if not is_fetch:
   % include("header")
 % end
 
 <main
-  data-spa = "yes"
-  data-spa_url = "/two" 
-  data-spa_title = "{{title}}"
-  data-spa_hide = "[data-spa]" 
-  data-spa_display = "block"
+  data-spa_url="/two"
+  data-spa_title="{{title}}"
 >
-
-  <h1>
-    Two
-  </h1>
+  <h1>Two</h1>
 
   <div id="modal-links">
-    <a href="/items/1" onclick="spa(); return false">Item 1</a>
-    <a href="/items/2" onclick="spa(); return false">Item 2</a>
-    <a href="/items/3" onclick="spa(); return false">Item 3</a>
+    <a href="/items/1" onclick="spa(this.getAttribute('href')); return false">Item 1</a>
+    <a href="/items/2" onclick="spa(this.getAttribute('href')); return false">Item 2</a>
+    <a href="/items/3" onclick="spa(this.getAttribute('href')); return false">Item 3</a>
   </div>
-
 </main>
 
-
-% if not is_xhr:
+% if not is_fetch: 
   % include("footer")
 % end

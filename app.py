@@ -1,5 +1,6 @@
 from bottle import error, get, post, request, response, run, static_file, view
 
+
 ##############################
 @get("/app.css")
 def _():
@@ -14,39 +15,38 @@ def _():
 @get("/")
 @view("index")
 def _():
-  is_xhr = True if request.headers.get('spa') else False
-  return dict(title="APP", is_xhr=is_xhr)
+  is_fetch = True if request.headers.get('From-Fetch') else False
+  return dict(title="Home page", is_fetch=is_fetch)
 
 ##############################
 @get("/one")
 @view("one")
 def _():
-  print(list(request.headers))
-  is_xhr = True if request.headers.get('spa') else False
-  return dict(title="One is One", is_xhr=is_xhr)
+  is_fetch = True if request.headers.get('From-Fetch') else False
+  return dict(title="One is One", is_fetch=is_fetch)
 
 
 ##############################
 @get("/two")
 @view("two")
 def _():
-  is_xhr = True if request.headers.get('spa') else False
-  return dict(title="Two is two", is_xhr=is_xhr)
+  is_fetch = True if request.headers.get('From-Fetch') else False
+  return dict(title="Two is two", is_fetch=is_fetch)
 
 ##############################
 @get("/items/<item_id>")
 @view("item")
 def _(item_id):
-  is_xhr = True if request.headers.get('spa') else False
-  page_title = f"Itemxxx {item_id}"
-  print(type(page_title))
-  print(page_title)
-  return dict(title=f"Itemxxx {item_id}", is_xhr=is_xhr, item_id=item_id)
+  is_fetch = True if request.headers.get('From-Fetch') else False
+  page_title = f"Title Item {item_id}"
+
+  return dict(title=page_title, is_fetch=is_fetch, item_id=item_id)
 
 ##############################
 @error(404)
+@view("404")
 def _(error):
-  return "error"
+  return
 
 ##############################
 run(host="127.0.0.1", port=80, debug=True, reloader=True)
