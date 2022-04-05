@@ -1,5 +1,5 @@
 const cachedPages = [];
-const STALE_TIME = 5000;
+const STALE_TIME = 10000;
 
 (function () {
   // Set the initial state in the history when the page loads

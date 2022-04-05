@@ -39,7 +39,7 @@ In your page templates, you need to optionally include the header and the footer
 
 Pages should generally look like this:
 
-```python
+```html
 % if not is_fetch:
   % include("header")
 % end
@@ -62,4 +62,4 @@ For an example of modal pages look at `views/item.html`
 
 The library is caching pages by default. This means that when you visit a page for the first time, it will fetch the HTML from the server and add that page to the cache so that when you visit it for the second time it doesn’t need to contact the server for it. There is a limit to how long pages will be cached and that’s because when you have a page that has dynamic content the user should get the new version from the server again after some time.
 
-You can change this limit with the `STALE_TIME` variable at the top of `spa.js` file. By default, it caches pages for 5 seconds (5000ms). If you have pages that never change content you might want to set the `STALE_TIME` to `Infinity` .
+You can change this limit with the `STALE_TIME` variable at the top of `spa.js` file. By default, it caches pages for 10 seconds (10000ms). If you have pages that never change content you might want to set the `STALE_TIME` to `Infinity`.
