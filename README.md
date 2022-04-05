@@ -2,6 +2,8 @@
 
 This repo is an example of the usage of the `spa.js` library. The example includes routing for normal pages, modal pages with a closing functionality, caching, and a 404 error page.
 
+This fork is a bit simplified/modified version of the original library.
+
 # How to use
 
 Import `spa.js` at the end of your body element. Don’t forget to serve it with Bottle.
