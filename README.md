@@ -46,7 +46,7 @@ Pages should generally look like this:
 
 <main
   data-spa_url="/one"
-  data-spa_title={{title}}
+  data-spa_title="{{title}}"
 >
   <h1>One</h1>
 </main>
