@@ -58,7 +58,7 @@ Pages should generally look like this:
 
 For an example of modal pages look at `views/item.html`
 
-## Configuration
+## Caching
 
 The library is caching pages by default. This means that when you visit a page for the first time, it will fetch the HTML from the server and add that page to the cache so that when you visit it for the second time it doesn’t need to contact the server for it. There is a limit to how long pages will be cached and that’s because when you have a page that has dynamic content the user should get the new version from the server again after some time.
 

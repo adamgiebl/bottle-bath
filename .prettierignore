@@ -6,3 +6,4 @@ coverage
 # *.html
 views/*.tpl
 views/*.html
+README.md
