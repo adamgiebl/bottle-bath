@@ -25,12 +25,14 @@ async function spa(spaURL, replace_state = true) {
     html = await response.text();
     console.log("HTML from server", { html: html });
 
+    const newPage = { cachedAt: Date.now(), html: html, url: spaURL }
+
     if (cachedPage) {
-      // if page was previously cached, update the cachedAt time
+      // if page was previously cached, update it with new cachedAt time and html
       const index = cachedPages.findIndex((x) => x.url == spaURL);
-      cachedPages[index] = cachedPages[index].cachedAt = Date.now();
+      cachedPages[index] = newPage
     } else {
-      cachedPages.push({ cachedAt: Date.now(), html: html, url: spaURL });
+      cachedPages.push(newPage);
     }
   } else {
     // using cached page
