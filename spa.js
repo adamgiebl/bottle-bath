@@ -4,10 +4,7 @@ const STALE_TIME = 10000;
 (function () {
   // Set the initial state in the history when the page loads
   const mainElement = document.querySelector("main");
-  if (!mainElement) {
-    console.error("Cannot find <main> element");
-    return;
-  }
+  if (!mainElement) return console.error("Cannot find <main> element");
   spaURL = mainElement.dataset.spaURL;
   history.replaceState({ spaURL: spaURL }, "", spaURL);
   console.log("Inital state replace", spaURL);
@@ -58,10 +55,7 @@ async function spa(spaURL, replace_state = true) {
     history.pushState({ spaURL: spaURL }, "", spaURL);
   }
 
-  if (!mainElement) {
-    console.error("Cannot find <main> element");
-    return;
-  }
+  if (!mainElement) return console.error("Cannot find <main> element");
 
   spaTitle = mainElement.dataset.spa_title;
   document.title = spaTitle;
