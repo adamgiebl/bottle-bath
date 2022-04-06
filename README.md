@@ -33,7 +33,7 @@ Modify your navigation links so that they have this onclick listener:
 <a href="/one" onclick="spa(this); return false">One</a>
 ```
 
-Alternatively, you can also use this for a nicer syntax:
+Alternatively, you can also use `is="spa-link"` for a nicer syntax:
 
 ```html
 <a href="/one" is="spa-link">One</a>
