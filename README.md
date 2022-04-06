@@ -30,11 +30,13 @@ Include a `<div>` element with the class `spa-wrapper` at the end of your header
 Modify your navigation links so that they have this onclick listener:
 
 ```html
-<nav>
-  <a href="/" onclick="spa(this); return false">Home</a>
-  <a href="/one" onclick="spa(this); return false">One</a>
-  <a href="/two" onclick="spa(this); return false">Two</a>
-</nav>
+<a href="/one" onclick="spa(this); return false">One</a>
+```
+
+Alternatively, you can also use this for a nicer syntax:
+
+```html
+<a href="/one" is="spa-link">One</a>
 ```
 
 In your page templates, you need to optionally include the header and the footer depending on the `is_fetch` variable. Page template also has to be wrapped in the `<main>` element with the following data attributes:
