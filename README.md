@@ -1,4 +1,4 @@
-<img src="https://adamgiebl.github.io/adamgiebl/bottle-bath.svg" width="300"/>
+<img src="https://adamgiebl.github.io/adamgiebl/bottle-bath.svg" width="450"/>
 
 # Bottle Bath
 
