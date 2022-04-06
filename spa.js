@@ -68,16 +68,3 @@ window.addEventListener("popstate", (event) => {
   spa(event.state.spaURL, false);
   return false;
 });
-
-class SpaLink extends HTMLAnchorElement {
-  constructor() {
-    super();
-
-    this.addEventListener("click", (e) => {
-      e.preventDefault();
-      return spa(this.getAttribute("href"));
-    });
-  }
-}
-
-customElements.define("spa-link", SpaLink, { extends: "a" });

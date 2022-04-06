@@ -33,12 +33,6 @@ Modify your navigation links so that they have this onclick listener:
 <a href="/one" onclick="spa(this); return false">One</a>
 ```
 
-Alternatively, you can also use `is="spa-link"` for a nicer syntax:
-
-```html
-<a href="/one" is="spa-link">One</a>
-```
-
 In your page templates, you need to optionally include the header and the footer depending on the `is_fetch` variable. Page template also has to be wrapped in the `<main>` element with the following data attributes:
 
 - `data-spa_url` - URL of the page, should match the one in your Bottle route

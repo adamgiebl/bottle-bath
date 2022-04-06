@@ -4,7 +4,7 @@
 % end
 
 <div class="spa-modal-overlay">
-  <a is="spa-link" href="/two" class="spa-modal-close-layer"></a>
+  <a href="/two" class="spa-modal-close-layer" onclick="spa(this); return false"></a>
   <main 
     class="modal"
     data-spa_modal
@@ -17,7 +17,7 @@
   <h1>
     Item {{item_id}}
   </h1>
-  <a is="spa-link" href="/two">✖</a>
+  <a href="/two" onclick="spa(this); return false">✖</a>
   </main>
 </div>
 
