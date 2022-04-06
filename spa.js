@@ -11,6 +11,8 @@ const STALE_TIME = 10000;
 })();
 
 async function spa(spaURL, replace_state = true) {
+  spaURL = spaURL.getAttribute("href") || spaURL;
+
   console.log("Loading SPA page:", spaURL);
 
   const cachedPage = cachedPages.find((item) => item.url === spaURL);

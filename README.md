@@ -31,9 +31,9 @@ Modify your navigation links so that they have this onclick listener:
 
 ```html
 <nav>
-  <a href="/" onclick="spa(this.getAttribute('href')); return false">Home</a>
-  <a href="/one" onclick="spa(this.getAttribute('href')); return false">One</a>
-  <a href="/two" onclick="spa(this.getAttribute('href')); return false">Two</a>
+  <a href="/" onclick="spa(this); return false">Home</a>
+  <a href="/one" onclick="spa(this); return false">One</a>
+  <a href="/two" onclick="spa(this); return false">Two</a>
 </nav>
 ```
 
