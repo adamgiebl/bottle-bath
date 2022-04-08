@@ -15,7 +15,7 @@ Import `spa.js` at the end of your body element. Don’t forget to serve it with
 <script src="/spa.js"></script>
 ```
 
-Modify your routes so that they include this code. You can pass any variables to the template as usual but you have to include `is_fetch`.
+Modify your GET routes for pages so that they include this code. You can pass any variables to the template as usual but you have to include `is_fetch`.
 
 ```python
 @get("/one")
